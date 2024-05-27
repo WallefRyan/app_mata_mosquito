@@ -20,18 +20,35 @@ function posicaoRandomica(){
 
     //Se as posições conhecidirem com zero (CORREÇÃO) - Aplicando controle retirando a possifilidade de posicoes negativa
     posicaoX = posicaoX < 0 ? 0 : posicaoX
-    posicaoX = posicaoY < 0 ? 0 : posicaoY
+    posicaoY = posicaoY < 0 ? 0 : posicaoY
 
     console.log(posicaoX, posicaoY)
 
     //Cria o elemento HTML de forma dinamica e incluindo esse elemento no Body da Pagina
     var mosquito = document.createElement('img')
     mosquito.src = 'src/img/mosca.png'
-    mosquito.className = 'mosquito1'
+    mosquito.className = tamanhoAleatorio()
     // forma a cordenada em pixel
     mosquito.style.left = posicaoX + 'px'
     mosquito.style.top = posicaoY + 'px'
     mosquito.style.position = 'absolute'
+
     document.body.appendChild(mosquito)
 
+}
+
+function tamanhoAleatorio() {
+    //Cria 3 classes de 0 a 2 para ajustar-mos o tamanho
+    var classe = Math.floor(Math.random() * 3 )
+    console.log(classe)
+
+    switch(classe){
+        case 0:
+            return "mosquito1"
+        case 1:
+            return "mosquito2"
+        case 2:
+            return "mosquito3"
+        default:
+    }
 }
