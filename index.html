@@ -10,8 +10,26 @@
 </head>
 <body onresize="ajusteTamanhoPalcoJogo()">
      
+    <div class="painel">
+        <div class="vidas">
+            <img src="src/img/coracao_vazio.png" >
+            <img src="src/img/coracao_cheio.png" >
+            <img src="src/img/coracao_cheio.png" >
+            <div class="cromometro">
+                Tempo Restante: ?
+            </div>
+        </div>
+    </div>
+    
     <script>
+        //Criando o mosquito de forma aleatoria
         posicaoRandomica()
+
+
+        //Responsavel por criar os mosquitos em um ciclo de tempo
+        setInterval(function(){
+            posicaoRandomica()
+        }, 1000)
     </script>
 
 </body>
