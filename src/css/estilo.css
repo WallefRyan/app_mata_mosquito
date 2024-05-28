@@ -1,6 +1,15 @@
+html{
+    cursor: url('/src/img/mata_mosca.png') 30 30, auto;
+}
+
 body{
-    background-image: url(/src/img/bg.jpg);
+    background-image: url('/src/img/fundo.jpg');
     background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center; 
+    min-height: 100vh; /* Garantir que o body tenha pelo menos a altura da janela de visualização */
+    margin: 0; 
+    
 }
 
 .mosquito1{
